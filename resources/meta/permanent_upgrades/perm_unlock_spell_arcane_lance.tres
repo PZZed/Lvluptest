@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PermanentUpgradeData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/meta/PermanentUpgradeData.gd" id="1"]
+[ext_resource type="Resource" path="res://resources/spells/mage_arcane_lance.tres" id="2"]
+
+[resource]
+script = ExtResource("1")
+id = &"perm_unlock_spell_arcane_lance"
+display_name = "Débloquer sort Lance arcanique"
+description = "Ajoute ce sort en permanence au joueur."
+upgrade_type = 2
+base_cost = 160
+cost_increment_per_rank = 0
+max_rank = 1
+spell_resource = ExtResource("2")

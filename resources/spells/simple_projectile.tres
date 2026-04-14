@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="SpellData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/spells/SpellData.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = &"simple_projectile"
+display_name = "Projectile simple"
+spell_type = 0
+damage_scaling = 0
+damage = 14
+cooldown = 0.7
+cast_range = 360.0
+area_radius = 64.0
+projectile_speed = 680.0
+projectile_lifetime = 1.1

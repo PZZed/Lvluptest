@@ -1,0 +1,37 @@
+[gd_scene load_steps=13 format=3 uid="uid://game_scene"]
+
+[ext_resource type="PackedScene" path="res://scenes/entities/player/Player.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/ui/HUD.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/ui/GameOver.tscn" id="3"]
+[ext_resource type="Script" path="res://scripts/core/Game.gd" id="4"]
+[ext_resource type="Script" path="res://scripts/progression/ProgressionManager.gd" id="5"]
+[ext_resource type="PackedScene" path="res://scenes/ui/LevelUpPanel.tscn" id="6"]
+[ext_resource type="Resource" path="res://resources/upgrades/up_stat_force.tres" id="7"]
+[ext_resource type="Resource" path="res://resources/upgrades/up_stat_intelligence.tres" id="8"]
+[ext_resource type="Resource" path="res://resources/upgrades/up_stat_vitalite.tres" id="9"]
+[ext_resource type="Resource" path="res://resources/upgrades/up_unlock_long_range.tres" id="10"]
+[ext_resource type="Resource" path="res://resources/upgrades/up_upgrade_projectile.tres" id="11"]
+[ext_resource type="Resource" path="res://resources/upgrades/up_passive_arcane_training.tres" id="12"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("4")
+
+[node name="World" type="Node2D" parent="."]
+
+[node name="Player" parent="World" instance=ExtResource("1")]
+position = Vector2(640, 360)
+
+[node name="EnemyContainer" type="Node2D" parent="World"]
+
+[node name="ProgressionManager" type="Node" parent="."]
+script = ExtResource("5")
+upgrade_pool = [ExtResource("7"), ExtResource("8"), ExtResource("9"), ExtResource("10"), ExtResource("11"), ExtResource("12")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("2")]
+
+[node name="LevelUpPanel" parent="CanvasLayer" instance=ExtResource("6")]
+
+[node name="GameOver" parent="CanvasLayer" instance=ExtResource("3")]
+visible = false
