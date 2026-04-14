@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PlayerStats" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/entities/PlayerStats.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+vitalite = 14
+force = 14
+intelligence = 7
+agilite = 9
+defense = 12
+vitesse = 9
+chance = 8

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="PermanentUpgradeData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/meta/PermanentUpgradeData.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = &"perm_unlock_thief"
+display_name = "Débloquer classe Voleur"
+description = "Rend la classe Voleur disponible en permanence."
+upgrade_type = 1
+base_cost = 120
+cost_increment_per_rank = 0
+max_rank = 1
+class_id = &"thief"

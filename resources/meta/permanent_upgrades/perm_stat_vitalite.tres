@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PermanentUpgradeData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/meta/PermanentUpgradeData.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = &"perm_stat_vitalite"
+display_name = "+1 Vitalité (Permanent)"
+description = "Augmente les PV de base pour toutes les runs."
+upgrade_type = 0
+base_cost = 40
+cost_increment_per_rank = 30
+max_rank = 5
+stat_name = &"vitalite"
+stat_amount_per_rank = 1

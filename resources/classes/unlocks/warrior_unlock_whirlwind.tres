@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ClassSpellUnlockData" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/classes/ClassSpellUnlockData.gd" id="1"]
+[ext_resource type="Resource" path="res://resources/spells/warrior_whirlwind.tres" id="2"]
+[ext_resource type="Script" path="res://scripts/progression/UnlockConditionData.gd" id="3"]
+
+[sub_resource type="Resource" id="1"]
+script = ExtResource("3")
+condition_type = 0
+required_value = 3
+required_id = &""
+
+[resource]
+script = ExtResource("1")
+spell = ExtResource("2")
+note = "Débloque un sort de mêlée circulaire."
+conditions = [SubResource("1")]

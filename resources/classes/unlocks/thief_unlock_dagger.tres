@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="ClassSpellUnlockData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/classes/ClassSpellUnlockData.gd" id="1"]
+[ext_resource type="Resource" path="res://resources/spells/thief_shadow_dagger.tres" id="2"]
+[ext_resource type="Script" path="res://scripts/progression/UnlockConditionData.gd" id="3"]
+
+[sub_resource type="Resource" id="1"]
+script = ExtResource("3")
+condition_type = 1
+required_value = 2
+required_id = &""
+
+[sub_resource type="Resource" id="2"]
+script = ExtResource("3")
+condition_type = 3
+required_value = 1
+required_id = &"thief_contract"
+
+[resource]
+script = ExtResource("1")
+spell = ExtResource("2")
+note = "Débloque une dague rapide à haut DPS."
+conditions = [SubResource("1"), SubResource("2")]

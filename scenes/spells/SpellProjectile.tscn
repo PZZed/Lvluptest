@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://spell_projectile_scene"]
+
+[ext_resource type="Script" path="res://scripts/spells/SpellProjectile.gd" id="1"]
+
+[sub_resource type="CircleShape2D" id="1"]
+radius = 6.0
+
+[node name="SpellProjectile" type="Area2D"]
+script = ExtResource("1")
+monitoring = true
+monitorable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("1")
+
+[node name="Visual" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(0, -5, 8, 0, 0, 5, -8, 0)
+color = Color(0.4, 0.8, 1, 1)

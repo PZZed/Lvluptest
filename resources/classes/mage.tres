@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="PlayerClassData" load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/classes/PlayerClassData.gd" id="1"]
+[ext_resource type="Resource" path="res://resources/classes/mage_stats.tres" id="2"]
+[ext_resource type="Resource" path="res://resources/spells/close_aoe_burst.tres" id="3"]
+[ext_resource type="Resource" path="res://resources/spells/long_range_bolt.tres" id="4"]
+[ext_resource type="Resource" path="res://resources/classes/unlocks/mage_unlock_lance.tres" id="5"]
+
+[resource]
+script = ExtResource("1")
+id = &"mage"
+display_name = "Mage"
+description = "Maître des arcanes : dégâts magiques élevés et contrôle de zone."
+base_stats = ExtResource("2")
+starting_spells = [ExtResource("3"), ExtResource("4")]
+unlockable_spells = [ExtResource("5")]

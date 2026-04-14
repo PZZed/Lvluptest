@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="SpellData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/spells/SpellData.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = &"mage_arcane_lance"
+display_name = "Lance arcanique"
+spell_type = 2
+damage_scaling = 1
+damage = 48
+cooldown = 4.8
+cast_range = 760.0
+area_radius = 64.0
+projectile_speed = 500.0
+projectile_lifetime = 1.0
